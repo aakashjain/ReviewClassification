@@ -1,0 +1,8 @@
+*~
+*.pyc
+aclImdb_v1.tar.gz
+/graphs
+/dumps
+/aclImdb
+/webapp/*.pkl
+/webapp/*.npy

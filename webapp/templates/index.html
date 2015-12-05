@@ -1,0 +1,43 @@
+{% extends 'layout.html' %}
+{% block content %}
+	<div id="back">
+		<form action="" id="fm"  method="post">
+			<p>
+			<txt>Comments</txt><br><br>
+			<textarea id="comment"  name="comments" >{{ X }}</textarea>
+			<br><br>
+
+			{% if typ=='stars' %}
+				<input type="radio" name="type" value="stars" checked><txt>Stars</txt>
+				<input type="radio" name="type" value="binary"><txt>Positive/Negative</txt>
+			{% elif typ=='binary' %}
+				<input type="radio" name="type" value="stars"><txt>Stars</txt>
+				<input type="radio" name="type" value="binary" checked><txt>Positive/Negative</txt>
+			{% endif %}
+
+			<input id="submit" type="submit" value="Submit">
+			</p>
+		</form>
+		{% if answer=='pos' %}
+		  <img src="/static/image/positive.png" id="result">
+		{% elif answer=='neg' %}
+		  <img src="/static/image/negative.png" id="result">
+		{% elif answer=='10' %}
+		  <img src="/static/image/star10.png" id="results">
+		{% elif answer=='9' %}
+		  <img src="/static/image/star9.png" id="results">
+		{% elif answer=='8' %}
+		  <img src="/static/image/star8.png" id="results">
+		{% elif answer=='7' %}
+		  <img src="/static/image/star7.png" id="results">
+		{% elif answer=='4' %}
+		  <img src="/static/image/star4.png" id="results">
+		{% elif answer=='3' %}
+		  <img src="/static/image/star3.png" id="results">
+		{% elif answer=='2' %}
+		  <img src="/static/image/star2.png" id="results">
+		{% elif answer=='1' %}
+		  <img src="/static/image/star1.png" id="results">
+		{% endif %}
+	</div>
+{% endblock %}

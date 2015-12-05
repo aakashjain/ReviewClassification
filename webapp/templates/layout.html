@@ -1,0 +1,27 @@
+<!doctype:html>
+<html>
+	<head>
+		<title>Ebertron</title>
+		 <link rel="stylesheet" href="/static/common.css"> 
+		 <script type="text/javascript" src="/static/script.js"></script>
+	</head>
+	<body>
+		<div id="bar">
+			<img id="menu" onclick="showmenu(-30)" src="/static/image/menu.png">
+			<hmm>Ebertron</hmm>
+		</div>
+		{% block content %} {% endblock %}
+		<div id="sidebar">
+			<img src="/static/image/back.png" onclick="hidemenu(0)" id="back">
+			<a class="tab" href="/" >Home</a>
+			<a class="tab" href="/static/notebooks/Binary_NB.html" target="_blank">Binary + Naive Bayes</a>
+			<a class="tab" href="/static/notebooks/Binary_SVC.html" target="_blank">Binary + SVC</a>
+			<a class="tab" href="/static/notebooks/Binary_LogReg.html" target="_blank">Binary + Logistic Regression</a>
+			<a class="tab" href="/static/notebooks/Stars_NB.html" target="_blank">Stars + Naive Bayes</a>
+			<a class="tab" href="/static/notebooks/Stars_SVC.html" target="_blank">Stars + SVC</a>
+			<a class="tab" href="/static/notebooks/Stars_LogReg.html" target="_blank">Stars + Logistic Regression</a>
+			<a class="tab" href="/static/notebooks/Stars_SVR.html" target="_blank">Stars + SVR</a>
+			<a class="tab" href="/static/notebooks/Stars_LinReg.html" target="_blank">Stars + Linear Regression</a>
+		</div>
+	</body>
+</html>
